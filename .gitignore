@@ -18,22 +18,16 @@ package-lock.json
 # IDE configurations
 .idea
 .vscode
-# .vscode/*
-# !.vscode/settings.json
-# !.vscode/extensions.json
-# !.vscode/tasks.json
-
-# DEV Environment
 .devcontainer
 
 # Misc
-tools
 _sass/dist
 assets/js/dist
+tools
 
 # Un-Comment to restore original UI in gh-pages build
 # Note: remove 'gem "jekyll-sass-converter", "~> 2.0"' from Gemfile, for proper site build
 
-_data/origin
-_sass
-assets/css
+# _data/origin
+# _sass
+# assets/css

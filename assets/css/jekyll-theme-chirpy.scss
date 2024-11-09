@@ -1,0 +1,20 @@
+---
+---
+
+@import 'main
+{%- if jekyll.environment == ' production
+  ' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* append your custom style below */
+
+// To adjust the year circle in Archives
+// The adjustment is for it getting shifted for using custom font
+#archives .year::after {
+  left: 11.5px;
+}
+
+// With the help of following documentation
+// https://chirpy.cotes.page/posts/getting-started/#customizing-the-stylesheet
