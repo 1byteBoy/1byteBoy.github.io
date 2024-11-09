@@ -2,13 +2,22 @@
 
 - type: github
   icon: "fab fa-github"
+  url: "https://github.com/1byteBoy"
 
-- type: twitter
-  icon: "fa-brands fa-x-twitter"
+- type: htb
+  icon: "fa-solid fa-cube"
+  url: "https://app.hackthebox.com/users/1073198"
 
-- type: email
-  icon: "fas fa-envelope"
-  noblank: true # open link in current tab
+- type: tryhackme
+  icon: "fa-solid fa-cloud"
+  url: "https://tryhackme.com/r/p/8bitBoy"
+
+# - type: twitter
+#   icon: "fa-brands fa-x-twitter"
+
+# - type: email
+#   icon: "fas fa-envelope"
+#   noblank: true # open link in current tab
 
 - type: rss
   icon: "fas fa-rss"

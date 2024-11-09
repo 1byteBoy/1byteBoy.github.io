@@ -1,43 +1,49 @@
-# Chirpy Starter
+<h1 align="center"> Hi Everyone </h1>
+<p align="center" style="font-size:1.5em"> I am 8bitBoy </p>
 
-[![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
-[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
+This is my blog site source code. I built the site using [jekyll](https://jekyllrb.com/), a static site generator.
+<img align="right" width="100" src="https://jekyllrb.com/img/logo-2x.png" width=100px/>
 
-When installing the [**Chirpy**][chirpy] theme through [RubyGems.org][gem], Jekyll can only read files in the folders
-`_data`, `_layouts`, `_includes`, `_sass` and `assets`, as well as a small part of options of the `_config.yml` file
-from the theme's gem. If you have ever installed this theme gem, you can use the command
-`bundle info --path jekyll-theme-chirpy` to locate these files.
+## Theme
 
-The Jekyll team claims that this is to leave the ball in the user’s court, but this also results in users not being
-able to enjoy the out-of-the-box experience when using feature-rich themes.
+The theme i am using for my blog is [jekyll-theme-chirpy](https://github.com/cotes2020/jekyll-theme-chirpy).\
+The devs also provides a starter template called [chirpy-starter](https://github.com/cotes2020/chirpy-starter), which i used as my base template 
+<img align="right" width="100" src="https://chirpy-img.netlify.app/commons/avatar.jpg" style="border-radius: 25px;">
 
-To fully use all the features of **Chirpy**, you need to copy the other critical files from the theme's gem to your
-Jekyll site. The following is a list of targets:
+## Customization
 
-```shell
-.
-├── _config.yml
-├── _plugins
-├── _tabs
-└── index.html
+Although the starter template is totally fine, there are still some limitation about various customization options like fonts, colors, site logic etc.
+
+This can be easily avoided by using the original chirpy theme repo [jekyll-theme-chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) and making changes to specific files.
+
+To keep things simple the devs created the [chirpy-starter](https://github.com/cotes2020/chirpy-starter) template but if we want to customize anything, they have also provided an option to do so in the following documentation
+
+https://chirpy.cotes.page/posts/getting-started/#customizing-the-stylesheet
+
+In short we just have to copy and edit the files that holds the core logic or functionality for the specific thing we want to customize
+
+## My Customizations
+
+While the default font is fine, i personally like fonts with bold rounded texts. So as i was writing my first writeup for my blog i stumbled upon this website [vsociety_](https://www.vicarius.io/vsociety/), they were using [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono) from [Google Fonts](https://fonts.google.com/). I liked it and i used it, simple
+
+For the font, i added an entry in `_data/origin/cors.yml` and change the link for `webfonts:`
+
+For the font to take effect, i made two new entries `_sass/main.sass` and `_sass/variables-hook.sass` and copied in the original content and made changes in `variables-hook.sass`
+
+```css
+$font-family-base: 'IBM Plex Mono', monospace;
+$font-family-heading: 'IBM Plex Mono', monospace;
 ```
 
-To save you time, and also in case you lose some files while copying, we extract those files/configurations of the
-latest version of the **Chirpy** theme and the [CD][CD] workflow to here, so that you can start writing in minutes.
+With the font change, i noticed some UI get broken, which i fixed it in `assets/css/jekyll-theme-chirpy.css`
 
-## Usage
+With that done, the site was not building due to some sass syntax issue due to version problem, which i fixed by adding the following in `Gemfile`
 
-Check out the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
+`gem "jekyll-sass-converter", "~> 2.0"`
 
-## Contributing
+<!-- ## Other Source of Help
 
-This repository is automatically updated with new releases from the theme repository. If you encounter any issues or want to contribute to its improvement, please visit the [theme repository][chirpy] to provide feedback.
-
-## License
-
-This work is published under [MIT][mit] License.
-
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
-[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
-[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+https://github.com/cotes2020/jekyll-theme-chirpy/discussions/1622\
+https://github.com/cotes2020/jekyll-theme-chirpy/discussions/1212\
+https://github.com/cotes2020/jekyll-theme-chirpy/discussions/1185#discussioncomment-6775249\
+[jekyll-theme-chirpy Discussions](https://github.com/cotes2020/jekyll-theme-chirpy/discussions/categories/q-a?discussions_q=category%3AQ%26A+css) -->
