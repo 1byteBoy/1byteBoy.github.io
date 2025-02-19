@@ -5,11 +5,13 @@
   url: "https://github.com/1byteBoy"
 
 - type: htb
-  icon: "fa-solid fa-cube"
+  # icon: "fa-solid fa-cube"
+  icon: "htb"
   url: "https://app.hackthebox.com/users/1073198"
 
-- type: tryhackme
-  icon: "fa-solid fa-cloud"
+- type: thm
+  # icon: "fa-solid fa-cloud"
+  icon: "thm"
   url: "https://tryhackme.com/r/p/8bitBoy"
 
 # - type: twitter

@@ -39,11 +39,24 @@ With the font change, i noticed some UI get broken, which i fixed it in `assets/
 
 With that done, the site was not building due to some sass syntax issue due to version problem, which i fixed by adding the following in `Gemfile`
 
-`gem "jekyll-sass-converter", "~> 2.0"`
+```
+gem "jekyll-sass-converter", "~> 2.0"
+```
 
-<!-- ## Other Source of Help
+Finally run `bundle update` to update the gem configuration and everything should build, run and show properly.
 
-https://github.com/cotes2020/jekyll-theme-chirpy/discussions/1622\
-https://github.com/cotes2020/jekyll-theme-chirpy/discussions/1212\
-https://github.com/cotes2020/jekyll-theme-chirpy/discussions/1185#discussioncomment-6775249\
-[jekyll-theme-chirpy Discussions](https://github.com/cotes2020/jekyll-theme-chirpy/discussions/categories/q-a?discussions_q=category%3AQ%26A+css) -->
+## Github Pages UI Issue
+
+One of the issue i was facing, which i had got no idea for a long time until now, is a total UI getting broken, after github pages build. I though it was due to my customization but it was running and building just fine locally.
+
+The issue was in a environmental variable that was set in github workflow file `.github/workflow/jekyll.yml` while the site was build.
+
+To test how it breaks run (locally) `JEKYLL_ENV=production bundle exec jekyll serve`
+
+The fix is to remove the following from the `jekyll.yml` file 
+
+```yml
+env:
+  JEKYLL_ENV: production
+```
+
